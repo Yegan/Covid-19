@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">>Back <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active" href="#"> <span class="text-right">Cancel </span></a>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Default form login -->
+<form class="text-center border border-light p-5" action="#!">
+
+<div class="container">
+<p class="h4 mb-4">COVID-19 SELF TEST</p>
+
+    <div *ngIf="!showDiv" class="sign-up">
+
+        <div class="text-center" style="padding:20px 0">
+          <!-- Main Form -->
+          <div class="login-form-1">
+            <form id="login-form" class="text-left">
+              <div class="login-form-main-message"></div>
+              <div class="main-login-form">
+                <div class="login-group">
+                  <div class="form-group">
+                    <label for="lg_username" class="sr-only">Username</label>
+                    <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+                  </div>
+                  <div class="form-group">
+                    <label for="lg_password" class="sr-only">Password</label>
+                    <input type="password" class="form-control" id="lg_password" name="lg_password" placeholder="password">
+                  </div>
+                  <div class="form-group login-group-checkbox">
+                    <input type="checkbox" id="lg_remember" name="lg_remember">
+                    <label for="lg_remember">Accept terms and conditions</label>
+                  </div>
+                </div>
+                <button (click)='toggleDiv()' type="submit" class="login-button">Login</button>
+              </div>
+              <div class="etc-login-form">
+                <p>forgot your password? <a href="#">click here</a></p>
+                <p>new user? <a href="#">create new account</a></p>
+              </div>
+            </form>
+          </div>
+          <!-- end:Main Form -->
+        </div>
+
+
+
+    </div>
+
+
+    <div *ngIf="showDiv" class="question-one">
+      <h1 class="question-text">Do you have a cough?</h1>
+      <img src="/assets/images/cough.jpg" class="cough-image" alt="">
+      <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit"> {{yes}}</button>
+      <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit">{{no}}</button>
+
+  </div>
+
+  <div *ngIf="count == 1" class="question-one">
+    <h1 class="question-text">Do you have a cold?</h1>
+    <img src="/assets/images/cold.jpg" class="cough-image" alt="">
+    <button class="btn btn-info btn-block my-4" type="submit"> {{yes}}</button>
+    <button class="btn btn-info btn-block my-4" type="submit">{{no}}</button>
+
+</div>
+
+
+
+</div>
+
+</form>
+<!-- Default form login -->

@@ -12,9 +12,9 @@
 <form class="text-center border border-light p-5" action="#!">
 
 <div class="container">
-    <p class="h4 mb-4">COVID-19 SELF TEST</p>
 
-    <div *ngIf="!showDiv" class="sign-up">
+    <div *ngIf="count==0" class="sign-up">
+      <p class="h4 mb-4">COVID-19 SELF TEST</p>
 
         <div class="text-center" style="padding:20px 0">
           <!-- Main Form -->
@@ -25,7 +25,7 @@
                 <div class="login-group">
                   <div class="form-group">
                     <label for="lg_username" class="sr-only">Username</label>
-                    <input type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
+                    <input [(ngModel)] = "username"  type="text" class="form-control" id="lg_username" name="lg_username" placeholder="username">
                   </div>
                   <div class="form-group">
                     <label for="lg_password" class="sr-only">Password</label>
@@ -36,7 +36,8 @@
                     <label for="lg_remember">Accept terms and conditions</label>
                   </div>
                 </div>
-                <button (click)='toggleDiv()' type="submit" class="login-button">Login</button>
+                <button  (click)='toggleDiv()' type="submit" class="login-button">Login</button>
+
               </div>
               <div class="etc-login-form">
                 <p>forgot your password? <a href="#">click here</a></p>
@@ -54,44 +55,115 @@
     </div>
   </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+
     <div *ngIf="count==1" class="question-one">
-
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav row">
-            <a class="nav-item nav-link active " href="#">>Back <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link active " href="#"> Cancel<span class="sr-only">(current)</span></a>
-
-          </div>
-        </div>
+      <h4>Welcome {{username}} </h4>
       <h1 class="question-text">Do you have a cough?</h1>
       <img src="/assets/images/cough.jpg" class="cough-image" alt="">
-
       <div class="btn-group btn-group-lg" role="group" aria-label="...">
-        <button (click)='toggleDiv() ' class="btn btn-info btn-block my-4 yes-btn" type="submit"> {{yes}}</button>
-        <button (click)='toggleDiv()' class="btn btn-info btn-block my-4 no-btn" type="submit">{{no}}</button>
+        <button  (click)='toggleDiv() ' class="btn btn-info btn-block my-4 yes-btn" type="submit"> {{yes}}</button>
+        <button  (click)='toggleDiv()' class="btn btn-info btn-block my-4 no-btn" type="submit">{{no}}</button>
       </div>
   </div>
-</nav>
 
 
   <div *ngIf="count==2" class="question-one">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav row">
-          <a class="nav-item nav-link active " href="#">>Back <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link active " href="#"> Cancel<span class="sr-only">(current)</span></a>
-
-        </div>
-      </div>
-    </nav>
     <h1 class="question-text">Do you have a cold?</h1>
     <img src="/assets/images/cold.jpg" class="cough-image" alt="">
     <div class="btn-group btn-group-lg" role="group" aria-label="...">
-    <button class="btn btn-info btn-block my-4" type="submit"> {{yes}}</button>
-    <button class="btn btn-info btn-block my-4" type="submit">{{no}}</button>
+    <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit"> {{yes}}</button>
+    <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit">{{no}}</button>
   </div>
+</div>
 
-</div> -->
+<div *ngIf="count==3" class="question-one">
+  <h1 class="question-text">Are you having Diarrhea?</h1>
+  <img src="/assets/images/toilet.png" class="cough-image" alt="">
+  <div class="btn-group btn-group-lg" role="group" aria-label="...">
+  <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit"> {{yes}}</button>
+  <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit">{{no}}</button>
+</div>
+</div>
+
+<div *ngIf="count==4" class="question-one">
+  <h1 class="question-text">Are you having a sore throat?</h1>
+  <img src="/assets/images/throat.png" class="cough-image" alt="">
+  <div class="btn-group btn-group-lg" role="group" aria-label="...">
+  <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit"> {{yes}}</button>
+  <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit">{{no}}</button>
+</div>
+</div>
+
+<div *ngIf="count==5" class="question-one">
+  <h1 class="question-text">Are you having body aches?</h1>
+  <img src="/assets/images/body.png" class="cough-image" alt="">
+  <div class="btn-group btn-group-lg" role="group" aria-label="...">
+  <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit"> {{yes}}</button>
+  <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit">{{no}}</button>
+</div>
+</div>
+
+<div *ngIf="count==6" class="question-one">
+  <h1 class="question-text">Are you having a headache?</h1>
+  <img src="/assets/images/head.png" class="cough-image" alt="">
+  <div class="btn-group btn-group-lg" role="group" aria-label="...">
+  <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit"> {{yes}}</button>
+  <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit">{{no}}</button>
+</div>
+</div>
+
+<div *ngIf="count==7" class="question-one">
+  <h1 class="question-text">Do you have a fever?</h1>
+  <img src="/assets/images/temp.png" class="cough-image" alt="">
+  <div class="btn-group btn-group-lg" role="group" aria-label="...">
+  <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit"> {{yes}}</button>
+  <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit">{{no}}</button>
+</div>
+</div>
+
+<div *ngIf="count==8" class="question-one">
+  <h1 class="question-text">Do you have a fever?</h1>
+  <img src="/assets/images/breath.svg" class="cough-image" alt="">
+  <div class="btn-group btn-group-lg" role="group" aria-label="...">
+  <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit"> {{yes}}</button>
+  <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit">{{no}}</button>
+</div>
+</div>
+
+
+<div *ngIf="positive">
+  <div class="container card" style="width: 18rem;">
+      <div class="card-body">
+      <h5 class="card-title">Result:</h5>
+      <p class="card-text">Your risk of
+        having COVID-19 is
+        SEVERE.</p>
+        <p>Do not panic,isolate yourself from friends and family.</p>
+        <p>Call 0800-9700-0010</p>
+        <p>SMS: 08099555577</p>
+        <p>WHATSAPP:07087110839</p>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="negative">
+  <div class="container card" style="width: 18rem;">
+      <div class="card-body">
+      <h5 class="card-title">Result:</h5>
+      <p class="card-text">Your risk of
+        having COVID-19 is
+        LOW.</p>
+        <p>You may be stressed,get some rest. </p>
+
+    </div>
+  </div>
+</div>
+
+
+
+
 </form>
 <!-- Default form login -->

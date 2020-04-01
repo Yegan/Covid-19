@@ -16,22 +16,27 @@ export class AppComponent {
   no:string = 'No';
   showDiv:boolean = false;
   count:number = 0;
+  username: string = '';
+  adminDiv:boolean = false;
+
+  positive:boolean = true;
+  negative:boolean = false;
+
+  yesClick:number = 0;
+  noClick:number=0;
 
 
-// counterCount(num:number):void{
-// this.count= num++
 
-// console.log(this.yes)
-
-// //this.showDiv = false;
-// }
 
   toggleDiv():void{
     this.showDiv = !this.showDiv;
     this.count = this.count+1;
-    console.log(this.count)
+
+
 
   }
+
+
 
 
 

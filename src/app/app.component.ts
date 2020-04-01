@@ -13,20 +13,26 @@ export class AppComponent {
   showDiv:boolean = false;
   count:number = 0;
   username: string = '';
-
-  loginBtn:string = "login";
-
   adminDiv:boolean = false;
+
+  positive:boolean = true;
+  negative:boolean = false;
+
+  yesClick:number = 0;
+  noClick:number=0;
+
+
+
 
   toggleDiv():void{
     this.showDiv = !this.showDiv;
     this.count = this.count+1;
 
+
+
   }
 
-  toggleAdmin():void{
-    this.adminDiv = !this.adminDiv;
-  }
+
 
 
 

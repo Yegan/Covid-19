@@ -36,8 +36,7 @@
                     <label for="lg_remember">Accept terms and conditions</label>
                   </div>
                 </div>
-                <button [(ngModel)] = "loginBtn" (click)='toggleDiv()' type="submit" class="login-button">Login</button>
-                <button [(ngModel)] = "loginBtn" (click)='toggleAdmin()' type="submit" class="login-button">Admin</button>
+                <button  (click)='toggleDiv()' type="submit" class="login-button">Login</button>
 
               </div>
               <div class="etc-login-form">
@@ -52,11 +51,7 @@
     </div>
   </div>
 
-      <div *ngIf="adminDiv" >
 
-        Hello!
-
-      </div>
 
 
     <div *ngIf="count==1" class="question-one">
@@ -64,8 +59,8 @@
       <h1 class="question-text">Do you have a cough?</h1>
       <img src="/assets/images/cough.jpg" class="cough-image" alt="">
       <div class="btn-group btn-group-lg" role="group" aria-label="...">
-        <button (click)='toggleDiv() ' class="btn btn-info btn-block my-4 yes-btn" type="submit"> {{yes}}</button>
-        <button (click)='toggleDiv()' class="btn btn-info btn-block my-4 no-btn" type="submit">{{no}}</button>
+        <button  (click)='toggleDiv() ' class="btn btn-info btn-block my-4 yes-btn" type="submit"> {{yes}}</button>
+        <button  (click)='toggleDiv()' class="btn btn-info btn-block my-4 no-btn" type="submit">{{no}}</button>
       </div>
   </div>
 
@@ -131,6 +126,36 @@
   <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit"> {{yes}}</button>
   <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit">{{no}}</button>
 </div>
+</div>
+
+
+<div *ngIf="positive">
+  <div class="container card" style="width: 18rem;">
+      <div class="card-body">
+      <h5 class="card-title">Result:</h5>
+      <p class="card-text">Your risk of
+        having COVID-19 is
+        SEVERE.</p>
+        <p>Do not panic,isolate yourself from friends and family.</p>
+        <p>Call 0800-9700-0010</p>
+        <p>SMS: 08099555577</p>
+        <p>WHATSAPP:07087110839</p>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="negative">
+  <div class="container card" style="width: 18rem;">
+      <div class="card-body">
+      <h5 class="card-title">Result:</h5>
+      <p class="card-text">Your risk of
+        having COVID-19 is
+        LOW.</p>
+        <p>You may be stressed,get some rest. </p>
+
+    </div>
+  </div>
 </div>
 
 

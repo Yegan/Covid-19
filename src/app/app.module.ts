@@ -2,26 +2,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-// import { questionTempComponent } from './app/questionTemp/questionTemp.component';
+import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { QuestionComponent } from './question/question.component';
 import { LoginComponent } from './login/login.component';
+import { StatsComponent } from './stats/stats.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionComponent,
     LoginComponent,
-    // questionTempComponent
+    StatsComponent,
+    NavbarComponent,
+
+
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {path:'', component: LoginComponent},
+      {path:'question', component: QuestionComponent}
+    ])
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-
-
-
- }
+export class AppModule {}

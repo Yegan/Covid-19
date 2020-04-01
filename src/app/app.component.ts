@@ -18,16 +18,23 @@ export class AppComponent {
   positive:boolean = true;
   negative:boolean = false;
 
-  yesClick:number = 0;
-  noClick:number=0;
+  yesClick:number =0;
+  noClick:number= 0;
 
 
 
 
-  toggleDiv():void{
+  toggleDiv(value:string):void{
     this.showDiv = !this.showDiv;
     this.count = this.count+1;
-
+    console.log(value);
+    if(value== "yes"){
+      this.yesClick++
+    }
+    else{
+      this.noClick++
+    }
+    console.log(this.yesClick)
 
 
   }

@@ -1,18 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">>Back <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link active" href="#"> <span class="text-right">Cancel </span></a>
+    <div class="navbar-nav row">
+      <a class="nav-item nav-link active " href="#">>Back <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active " href="#"> Cancel<span class="sr-only">(current)</span></a>
 
     </div>
   </div>
-</nav>
+</nav> -->
 
 <!-- Default form login -->
 <form class="text-center border border-light p-5" action="#!">
 
 <div class="container">
-<p class="h4 mb-4">COVID-19 SELF TEST</p>
+    <p class="h4 mb-4">COVID-19 SELF TEST</p>
 
     <div *ngIf="!showDiv" class="sign-up">
 
@@ -46,31 +46,52 @@
           </div>
           <!-- end:Main Form -->
         </div>
+    </div>
+<pm-questionTemp></pm-questionTemp>
 
-
+  <!-- <div *ngIf="count == 1" class="question-one">
 
     </div>
-
-
-    <div *ngIf="showDiv" class="question-one">
-      <h1 class="question-text">Do you have a cough?</h1>
-      <img src="/assets/images/cough.jpg" class="cough-image" alt="">
-      <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit"> {{yes}}</button>
-      <button (click)='toggleDiv()' class="btn btn-info btn-block my-4" type="submit">{{no}}</button>
-
   </div>
 
-  <div *ngIf="count == 1" class="question-one">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div *ngIf="count==1" class="question-one">
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav row">
+            <a class="nav-item nav-link active " href="#">>Back <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active " href="#"> Cancel<span class="sr-only">(current)</span></a>
+
+          </div>
+        </div>
+      <h1 class="question-text">Do you have a cough?</h1>
+      <img src="/assets/images/cough.jpg" class="cough-image" alt="">
+
+      <div class="btn-group btn-group-lg" role="group" aria-label="...">
+        <button (click)='toggleDiv() ' class="btn btn-info btn-block my-4 yes-btn" type="submit"> {{yes}}</button>
+        <button (click)='toggleDiv()' class="btn btn-info btn-block my-4 no-btn" type="submit">{{no}}</button>
+      </div>
+  </div>
+</nav>
+
+
+  <div *ngIf="count==2" class="question-one">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav row">
+          <a class="nav-item nav-link active " href="#">>Back <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active " href="#"> Cancel<span class="sr-only">(current)</span></a>
+
+        </div>
+      </div>
+    </nav>
     <h1 class="question-text">Do you have a cold?</h1>
     <img src="/assets/images/cold.jpg" class="cough-image" alt="">
+    <div class="btn-group btn-group-lg" role="group" aria-label="...">
     <button class="btn btn-info btn-block my-4" type="submit"> {{yes}}</button>
     <button class="btn btn-info btn-block my-4" type="submit">{{no}}</button>
+  </div>
 
-</div>
-
-
-
-</div>
-
+</div> -->
 </form>
 <!-- Default form login -->

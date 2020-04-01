@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ResultComponent } from './test-result/test.result.component';
 
+
 @NgModule({
   declarations: [
     AppComponent, ResultComponent
@@ -13,4 +14,8 @@ import { ResultComponent } from './test-result/test.result.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+
+
+ }

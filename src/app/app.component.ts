@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { questions } from '../assets/symptoms-questions';
 
 
 
@@ -8,6 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  questions = questions
+
   yes:string = 'Yes';
   no:string = 'No';
   showDiv:boolean = false;

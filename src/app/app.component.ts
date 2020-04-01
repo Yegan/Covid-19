@@ -18,14 +18,19 @@ export class AppComponent {
   count:number = 0;
 
 
-counterCount():void{
-this.count= this.count++;
-console.log(this.count)
-this.showDiv = false;
-}
+// counterCount(num:number):void{
+// this.count= num++
+
+// console.log(this.yes)
+
+// //this.showDiv = false;
+// }
 
   toggleDiv():void{
     this.showDiv = !this.showDiv;
+    this.count = this.count+1;
+    console.log(this.count)
+
   }
 
 

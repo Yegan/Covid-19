@@ -1,4 +1,4 @@
-const imageRoute = "/assets/images/"
+export const imageRoute = "../../assets/images"
 
 export const questions = [
 

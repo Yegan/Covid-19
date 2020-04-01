@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { StatsComponent } from './stats/stats.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,14 +18,14 @@ import { NavbarComponent } from './navbar/navbar.component';
     StatsComponent,
     NavbarComponent,
 
-
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
       {path:'', component: LoginComponent},
-      {path:'question', component: QuestionComponent}
+      {path:'question', component: QuestionComponent},
+      {path:'stats', component:StatsComponent}
     ])
   ],
   bootstrap: [AppComponent]

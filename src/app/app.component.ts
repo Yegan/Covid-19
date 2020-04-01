@@ -12,21 +12,20 @@ export class AppComponent {
   no:string = 'No';
   showDiv:boolean = false;
   count:number = 0;
+  username: string = '';
 
+  loginBtn:string = "login";
 
-// counterCount(num:number):void{
-// this.count= num++
-
-// console.log(this.yes)
-
-// //this.showDiv = false;
-// }
+  adminDiv:boolean = false;
 
   toggleDiv():void{
     this.showDiv = !this.showDiv;
     this.count = this.count+1;
-    console.log(this.count)
 
+  }
+
+  toggleAdmin():void{
+    this.adminDiv = !this.adminDiv;
   }
 
 

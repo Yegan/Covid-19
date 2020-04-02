@@ -1,0 +1,45 @@
+.question-one{
+    margin: auto;
+   width: 800px;
+   height: 900px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   /* background-color: grey; */
+ 
+ }
+ .cough-image{
+   height:400px;
+   width: 500px;
+ }
+ .question-text{
+   font-size: 50px;
+   margin: auto;
+   text-align: center;
+   /* margin-left: 400px; */
+ }
+ 
+ .btn{
+   font-size: 50px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   /* margin-top: 300px;
+   margin-left: 400px; */
+ }
+ 
+ .cough-image{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 200px;
+   height: 300px;
+ }
+ .cancel-btn{
+   text-align: right;
+ }
+ .back-btn{
+   text-align: left;
+ }
+ 
+ 

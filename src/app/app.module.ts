@@ -10,6 +10,7 @@ import { StatsComponent } from './stats/stats.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ResultComponent } from './result/result.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,6 @@ import { ResultComponent } from './result/result.component';
     StatsComponent,
     NavbarComponent,
     ResultComponent,
-
 
   ],
   imports: [

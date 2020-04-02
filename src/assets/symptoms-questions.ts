@@ -1,4 +1,4 @@
-export const imageRoute = "../../assets/images"
+export const imageRoute = "../../assets/images/"
 
 export const questions = [
 
@@ -12,7 +12,7 @@ export const questions = [
      question: "Are you experiencing any cold like symptoms?",
      img: `${imageRoute}cold.jpg`
   },
-
+ 
   {
     id: 3,
     question: "Do you have diarrhea?",

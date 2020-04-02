@@ -13,16 +13,19 @@ export class QuestionComponent implements OnInit {
   yes:string = 'Yes';
   no:string = 'No';
   showDiv:boolean = false;
-  count:number = 0;
+  count:number = 1;
   username: string = '';
   adminDiv:boolean = false;
+  imageWidth: number=30;
+  imageMargin:number=30;
+  imageCenter:number=0;
 
   positive:boolean = true;
   negative:boolean = false;
 
   yesClick:number =0;
   noClick:number= 0;
-
+  value: any;
   questions:any[] = questions;
 
   constructor() { }
@@ -40,6 +43,7 @@ export class QuestionComponent implements OnInit {
     else{
       this.noClick++
     }
+    
     console.log(this.yesClick)
  }
 }

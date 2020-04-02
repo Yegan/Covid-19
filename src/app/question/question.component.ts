@@ -1,8 +1,9 @@
 import { Component, OnInit, SystemJsNgModuleLoader } from '@angular/core';
 import { questions ,imageRoute  } from '../../assets/symptoms-questions';
-import { RouterModule, Route} from '@angular/router'
+import { Router } from '@angular/router'
 import { ngModuleJitUrl } from '@angular/compiler';
 import { NgModel } from '@angular/forms';
+
 
 @Component({
   selector: 'pm-question',
@@ -28,7 +29,7 @@ export class QuestionComponent implements OnInit {
   value: any;
   questions:any[] = questions;
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit() {
   }
@@ -43,7 +44,11 @@ export class QuestionComponent implements OnInit {
     else{
       this.noClick++
     }
-    
+
     console.log(this.yesClick)
+
+    if(this.count == 8){
+      this.router.navigate(['/result'])
+    }
  }
 }

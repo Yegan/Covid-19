@@ -6,11 +6,6 @@
    margin-left: auto;
    margin-right: auto;
    /* background-color: grey; */
- 
- }
- .cough-image{
-   height:400px;
-   width: 500px;
  }
  .question-text{
    font-size: 50px;
@@ -33,7 +28,7 @@
    margin-left: auto;
    margin-right: auto;
    width: 200px;
-   height: 300px;
+   height: 200px;
  }
  .cancel-btn{
    text-align: right;
@@ -41,5 +36,10 @@
  .back-btn{
    text-align: left;
  }
- 
+ .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
  

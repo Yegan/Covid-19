@@ -16,31 +16,31 @@ export const questions = [
   {
     id: 3,
     question: "Do you have diarrhea?",
-    img: `${imageRoute}toilet.jpg`
+    img: `${imageRoute}toilet.png`
  },
 
  {
   id: 4,
   question: "Are you experiencing any pain or discomfort in your throat?",
-  img: `${imageRoute}throat.jpg`
+  img: `${imageRoute}throat.png`
 },
 
 {
   id: 5,
   question: "Are you experiencing any aches or pain in your body?",
-  img: `${imageRoute}body.jpg`
+  img: `${imageRoute}body.png`
 },
 
 {
   id: 6,
   question: "Are you experiencing a headache?",
-  img: `${imageRoute}head.jpg`
+  img: `${imageRoute}head.png`
 },
 
 {
   id: 7,
   question: "Do you have a fever?",
-  img: `${imageRoute}breath.jpg`
+  img: `${imageRoute}breath.svg`
 }
 
 

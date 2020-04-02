@@ -1,0 +1,9 @@
+<div *ngFor= 'let question of questions;'>
+    <div  class="question-one" *ngIf="question.id == count">
+       
+    <h1 class="question-text">{{question.question}}</h1>
+    <img [src]='question.img' alt="" class='cough-image'>
+    <button (click)='toggleDiv("yes")' class="btn btn-info btn-block my-4" type="submit"> {{yes}}</button>
+    <button (click)='toggleDiv("no")' class="btn btn-info btn-block my-4" type="submit">{{no}}</button>
+    </div>
+</div>
